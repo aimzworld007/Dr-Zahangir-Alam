@@ -46,14 +46,6 @@ export default function About() {
                     <span className="font-medium w-36 flex-shrink-0 text-[#212529]">BCS Batch:</span>
                     <span>39</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">HRIS ID:</span>
-                    <span>166027</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">Code:</span>
-                    <span>138648</span>
-                  </li>
                 </ul>
               </div>
 

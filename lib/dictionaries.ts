@@ -10,6 +10,7 @@ export const en = {
     acceptingPatients: 'Accepting New Patients',
     name: 'Dr. Md. Jahangir Alam',
     nameBangla: '(মোঃ জাহাঙ্গীর আলম)',
+    degrees: 'MBBS, BCS (Health), MS (Orthopedic Surgery), CCD (BIRDEM)',
     typewriter: 'Bone Fracture, Arthritis & Spine Specialist Surgeon',
     subtitle: 'Dedicated to restoring mobility and improving quality of life.',
     bookConsultation: 'Book Consultation',
@@ -94,62 +95,30 @@ export const en = {
   services: {
     title: 'Specialized Services',
     subtitle: 'Comprehensive orthopedic care tailored to your specific needs.',
-    detailsLabels: {
-      conditionTreated: 'Conditions Treated',
-      procedure: 'Procedure Involved',
-      benefits: 'Benefits',
-      recoveryExpectations: 'Recovery Expectations',
-      close: 'Close',
-      learnMore: 'Learn More',
-    },
     items: [
       {
         title: 'Trauma & Fracture Care',
         desc: 'Expert management of complex fractures, dislocations, and sports injuries using advanced surgical and non-surgical techniques.',
-        conditionTreated: 'Complex fractures, joint dislocations, severe sprains, and traumatic musculoskeletal injuries.',
-        procedure: 'Depending on severity, treatment ranges from casting and splinting to advanced surgical interventions like internal fixation (plates and screws) or external fixation.',
-        benefits: 'Restores bone alignment, promotes proper healing, prevents long-term deformities, and minimizes pain.',
-        recoveryExpectations: 'Recovery varies from a few weeks for minor fractures to several months for complex surgeries. Physical therapy is often required to restore full mobility.',
       },
       {
         title: 'Joint Replacement',
         desc: 'Surgical procedures to replace damaged joints with artificial implants, relieving pain and restoring function.',
-        conditionTreated: 'Severe osteoarthritis, rheumatoid arthritis, post-traumatic arthritis, and severe joint damage in knees, hips, or shoulders.',
-        procedure: 'The damaged cartilage and bone are removed and replaced with prosthetic components made of metal, plastic, or ceramic to recreate the joint surface.',
-        benefits: 'Significant pain relief, improved joint function, enhanced mobility, and a return to normal daily activities.',
-        recoveryExpectations: 'Initial recovery takes 4-6 weeks, with full recovery and maximum strength returning within 3-6 months. Dedicated physical therapy is crucial.',
       },
       {
         title: 'Arthroscopic Surgery',
         desc: 'Minimally invasive procedures to diagnose and treat joint problems, resulting in faster recovery times.',
-        conditionTreated: 'Torn meniscus, ACL/PCL tears, rotator cuff tears, loose bone fragments, and inflamed joint linings.',
-        procedure: 'A small camera (arthroscope) and miniature surgical instruments are inserted through tiny incisions to visualize and repair joint damage.',
-        benefits: 'Less pain, minimal scarring, lower risk of infection, and significantly faster recovery compared to traditional open surgery.',
-        recoveryExpectations: 'Most patients can return home the same day. Recovery is usually a few weeks, depending on the specific repair performed.',
       },
       {
         title: 'Spine Care',
         desc: 'Evaluation and treatment of spinal conditions, including herniated discs, spinal stenosis, and back pain.',
-        conditionTreated: 'Herniated discs, spinal stenosis, sciatica, spondylolisthesis, and chronic lower back or neck pain.',
-        procedure: 'Treatments range from conservative care (medication, physical therapy) to surgical options like discectomy, laminectomy, or spinal fusion.',
-        benefits: 'Relief from chronic back and leg pain, prevention of nerve damage, and restoration of spinal stability.',
-        recoveryExpectations: 'Conservative treatments show gradual improvement. Surgical recovery can take 3-6 months, requiring careful rehabilitation and activity modification.',
       },
       {
         title: 'Pediatric Orthopedics',
         desc: 'Specialized care for children with musculoskeletal problems, including congenital deformities and growth-related issues.',
-        conditionTreated: 'Clubfoot, hip dysplasia, scoliosis, limb length discrepancies, and pediatric fractures.',
-        procedure: 'Treatments are tailored for growing bodies, utilizing bracing, casting (like the Ponseti method), or specialized corrective surgeries.',
-        benefits: 'Corrects deformities early, ensures proper bone growth, and prevents long-term disability in adulthood.',
-        recoveryExpectations: 'Children often heal faster than adults. Recovery depends heavily on the condition, with ongoing monitoring required as the child grows.',
       },
       {
         title: 'Sports Medicine',
         desc: 'Treatment and prevention of sports-related injuries, helping athletes return to their peak performance safely.',
-        conditionTreated: 'Ligament sprains, muscle strains, tendonitis, tennis elbow, and stress fractures.',
-        procedure: 'Focuses on rapid recovery through targeted physical therapy, biologic injections (like PRP), and minimally invasive surgical repairs if necessary.',
-        benefits: 'Safe return to sports, prevention of future injuries, and optimization of athletic performance.',
-        recoveryExpectations: 'Varies widely based on the injury. A structured return-to-play protocol is followed to ensure the athlete is fully ready before resuming sports.',
       }
     ]
   },
@@ -163,6 +132,10 @@ export const en = {
     email: 'Email',
     hours: 'Consultation Hours',
     hoursDesc: '3:00 PM to 11:00 PM',
+    hoursList: [
+      { day: 'Saturday - Thursday', time: '3:00 PM - 11:00 PM' },
+      { day: 'Friday', time: 'Closed' }
+    ],
     emergency: 'Emergency Cases',
     emergencyDesc: 'For severe trauma or medical emergencies, please proceed to the nearest hospital emergency department immediately.',
     whatsappEmergency: 'WhatsApp (Emergency Only)',
@@ -181,6 +154,7 @@ export const bn = {
     acceptingPatients: 'নতুন রোগী দেখা হচ্ছে',
     name: 'ডাঃ মোঃ জাহাঙ্গীর আলম',
     nameBangla: '(Dr. Md. Jahangir Alam)',
+    degrees: 'এমবিবিএস, বিসিএস (স্বাস্থ্য), এমএস (অর্থোপেডিক সার্জারী), সিসিডি (বারডেম)',
     typewriter: 'হাড় ভাঙ্গা, বাত ব্যথা ও মেরুদণ্ড রোগ বিশেষজ্ঞ সার্জন',
     subtitle: 'আপনার সুস্থতা ও স্বাভাবিক চলাফেরা নিশ্চিত করতে আমরা নিবেদিত।',
     bookConsultation: 'অ্যাপয়েন্টমেন্ট নিন',
@@ -265,62 +239,30 @@ export const bn = {
   services: {
     title: 'বিশেষায়িত সেবাসমূহ',
     subtitle: 'আপনার প্রয়োজন অনুযায়ী সব ধরনের আধুনিক অর্থোপেডিক চিকিৎসা।',
-    detailsLabels: {
-      conditionTreated: 'যেসব রোগের চিকিৎসা করা হয়',
-      procedure: 'চিকিৎসা পদ্ধতি',
-      benefits: 'সুবিধাসমূহ',
-      recoveryExpectations: 'সুস্থ হওয়ার সময়কাল',
-      close: 'বন্ধ করুন',
-      learnMore: 'বিস্তারিত জানুন',
-    },
     items: [
       {
         title: 'ট্রমা ও ফ্র্যাকচার কেয়ার',
         desc: 'আধুনিক সার্জিক্যাল ও নন-সার্জিক্যাল পদ্ধতিতে জটিল হাড় ভাঙা, জয়েন্ট সরে যাওয়া এবং স্পোর্টস ইনজুরির উন্নত চিকিৎসা।',
-        conditionTreated: 'জটিল হাড় ভাঙা, জয়েন্ট সরে যাওয়া, মারাত্মক মচকে যাওয়া এবং আঘাতজনিত পেশী ও হাড়ের সমস্যা।',
-        procedure: 'আঘাতের তীব্রতার উপর ভিত্তি করে প্লাস্টার বা স্প্লিন্ট থেকে শুরু করে প্লেট-স্ক্রু (Internal Fixation) বা এক্সটার্নাল ফিক্সেশনের মতো আধুনিক সার্জারি করা হয়।',
-        benefits: 'হাড়ের সঠিক অবস্থান ফিরিয়ে আনা, দ্রুত নিরাময় নিশ্চিত করা, দীর্ঘমেয়াদী বিকৃতি রোধ করা এবং ব্যথা কমানো।',
-        recoveryExpectations: 'সাধারণ হাড় ভাঙার ক্ষেত্রে কয়েক সপ্তাহ এবং জটিল সার্জারির ক্ষেত্রে কয়েক মাস সময় লাগতে পারে। সম্পূর্ণ কর্মক্ষমতা ফিরে পেতে ফিজিওথেরাপি প্রয়োজন হতে পারে।',
       },
       {
         title: 'জয়েন্ট রিপ্লেসমেন্ট',
         desc: 'ক্ষতিগ্রস্ত জয়েন্ট পরিবর্তন করে কৃত্রিম জয়েন্ট স্থাপনের মাধ্যমে ব্যথা নিরাময় ও স্বাভাবিক চলাফেরা নিশ্চিত করা।',
-        conditionTreated: 'তীব্র অস্টিওআর্থ্রাইটিস, রিউমাটয়েড আর্থ্রাইটিস, আঘাত পরবর্তী আর্থ্রাইটিস এবং হাঁটু, নিতম্ব বা কাঁধের মারাত্মক ক্ষতি।',
-        procedure: 'ক্ষতিগ্রস্ত তরুণাস্থি ও হাড় অপসারণ করে মেটাল, প্লাস্টিক বা সিরামিকের তৈরি কৃত্রিম জয়েন্ট (Prosthesis) স্থাপন করা হয়।',
-        benefits: 'ব্যথা থেকে উল্লেখযোগ্য মুক্তি, জয়েন্টের কার্যক্ষমতা বৃদ্ধি, স্বাভাবিক চলাফেরা এবং দৈনন্দিন কাজে ফিরে যাওয়া।',
-        recoveryExpectations: 'প্রাথমিক সুস্থতায় ৪-৬ সপ্তাহ সময় লাগে। ৩-৬ মাসের মধ্যে সম্পূর্ণ শক্তি ফিরে আসে। নিয়মিত ফিজিওথেরাপি অত্যন্ত গুরুত্বপূর্ণ।',
       },
       {
         title: 'আর্থ্রোস্কোপিক সার্জারি',
         desc: 'ছোট ছিদ্রের মাধ্যমে (Minimally Invasive) জয়েন্টের সমস্যা নির্ণয় ও চিকিৎসা, যা রোগীকে দ্রুত সুস্থ করে তোলে।',
-        conditionTreated: 'মেনিসকাস টিয়ার, এসিএল/পিসিএল (ACL/PCL) টিয়ার, রোটেটর কাফ টিয়ার, জয়েন্টের ভেতরের আলগা হাড়ের টুকরো এবং প্রদাহ।',
-        procedure: 'একটি ছোট ক্যামেরা (আর্থ্রোস্কোপ) এবং ক্ষুদ্র সার্জিক্যাল যন্ত্রপাতি ছোট ছিদ্রের মাধ্যমে প্রবেশ করিয়ে জয়েন্টের ভেতরের সমস্যা নির্ণয় ও মেরামত করা হয়।',
-        benefits: 'কম ব্যথা, ছোট কাটা দাগ, সংক্রমণের ঝুঁকি কম এবং সাধারণ ওপেন সার্জারির তুলনায় অনেক দ্রুত সুস্থতা।',
-        recoveryExpectations: 'বেশিরভাগ রোগী একই দিনে বাড়ি ফিরতে পারেন। সার্জারির ধরনের উপর নির্ভর করে কয়েক সপ্তাহের মধ্যেই সুস্থ হওয়া সম্ভব।',
       },
       {
         title: 'মেরুদণ্ডের চিকিৎসা (Spine Care)',
         desc: 'পিঠে ব্যথা, পিএলআইডি (PLID) বা হার্নিয়েটেড ডিস্কসহ মেরুদণ্ডের বিভিন্ন সমস্যার সঠিক মূল্যায়ন ও চিকিৎসা।',
-        conditionTreated: 'হার্নিয়েটেড ডিস্ক, স্পাইনাল স্টেনোসিস, সায়াটিকা, স্পন্ডাইলোলিস্থেসিস এবং দীর্ঘমেয়াদী কোমর বা ঘাড়ের ব্যথা।',
-        procedure: 'ওষুধ ও ফিজিওথেরাপির মতো সাধারণ চিকিৎসা থেকে শুরু করে ডিসসেক্টমি, ল্যামিনেক্টমি বা স্পাইনাল ফিউশনের মতো সার্জিক্যাল চিকিৎসা প্রদান করা হয়।',
-        benefits: 'দীর্ঘমেয়াদী কোমর ও পায়ের ব্যথা থেকে মুক্তি, স্নায়ুর ক্ষতি রোধ এবং মেরুদণ্ডের স্থিতিশীলতা পুনরুদ্ধার।',
-        recoveryExpectations: 'সাধারণ চিকিৎসায় ধীরে ধীরে উন্নতি হয়। সার্জারির পর সুস্থ হতে ৩-৬ মাস সময় লাগতে পারে, এসময় সঠিক পুনর্বাসন ও নিয়মকানুন মেনে চলা জরুরি।',
       },
       {
         title: 'পেডিয়াট্রিক অর্থোপেডিক্স',
         desc: 'শিশুদের জন্মগত হাড় বাঁকা, ক্লাবফুট (Clubfoot) এবং শারীরিক বৃদ্ধিজনিত যেকোনো হাড়ের সমস্যার বিশেষ চিকিৎসা।',
-        conditionTreated: 'ক্লাবফুট (মুগুর পা), হিপ ডিসপ্লাসিয়া, স্কোলিওসিস, পায়ের দৈর্ঘ্যের অসামঞ্জস্যতা এবং শিশুদের হাড় ভাঙা।',
-        procedure: 'শিশুদের বর্ধনশীল শরীরের কথা মাথায় রেখে ব্রেসিং, কাস্টিং (যেমন পনসেটি পদ্ধতি) বা বিশেষ সংশোধনী সার্জারি করা হয়।',
-        benefits: 'প্রাথমিক পর্যায়ে বিকৃতি সংশোধন, হাড়ের সঠিক বৃদ্ধি নিশ্চিত করা এবং ভবিষ্যতে দীর্ঘমেয়াদী পঙ্গুত্ব রোধ করা।',
-        recoveryExpectations: 'শিশুরা প্রাপ্তবয়স্কদের তুলনায় দ্রুত সুস্থ হয়। সুস্থতার সময়কাল সমস্যার উপর নির্ভর করে এবং শিশুর বৃদ্ধির সাথে সাথে নিয়মিত ফলোআপ প্রয়োজন।',
       },
       {
         title: 'স্পোর্টস মেডিসিন',
         desc: 'খেলাধুলাজনিত আঘাতের চিকিৎসা ও প্রতিরোধ, যা খেলোয়াড়দের দ্রুত মাঠে ফিরতে সাহায্য করে।',
-        conditionTreated: 'লিগামেন্ট স্প্রেইন, পেশীর টান, টেন্ডোনাইটিস, টেনিস এলবো এবং স্ট্রেস ফ্র্যাকচার।',
-        procedure: 'সঠিক ফিজিওথেরাপি, বায়োলজিক ইনজেকশন (যেমন PRP) এবং প্রয়োজনে মিনিমালি ইনভেসিভ সার্জারির মাধ্যমে দ্রুত সুস্থতার উপর জোর দেওয়া হয়।',
-        benefits: 'নিরাপদে খেলাধুলায় ফিরে যাওয়া, ভবিষ্যতের আঘাত প্রতিরোধ এবং খেলোয়াড়দের কর্মক্ষমতা সর্বোচ্চ পর্যায়ে নিয়ে যাওয়া।',
-        recoveryExpectations: 'আঘাতের ধরনের উপর ভিত্তি করে সময়কাল ভিন্ন হয়। খেলোয়াড় সম্পূর্ণ ফিট কিনা তা নিশ্চিত করতে একটি নির্দিষ্ট "রিটার্ন-টু-প্লে" প্রোটোকল অনুসরণ করা হয়।',
       }
     ]
   },
@@ -334,6 +276,10 @@ export const bn = {
     email: 'ইমেইল',
     hours: 'রোগী দেখার সময়',
     hoursDesc: 'বিকাল ৩.০০ থেকে রাত ১১.০০ টা পর্যন্ত',
+    hoursList: [
+      { day: 'শনিবার - বৃহস্পতিবার', time: 'বিকাল ৩:০০ - রাত ১১:০০' },
+      { day: 'শুক্রবার', time: 'বন্ধ' }
+    ],
     emergency: 'জরুরি অবস্থা',
     emergencyDesc: 'যেকোনো গুরুতর দুর্ঘটনা বা ইমার্জেন্সির ক্ষেত্রে দ্রুত নিকটস্থ হাসপাতালের জরুরি বিভাগে যোগাযোগ করুন।',
     whatsappEmergency: 'হোয়াটসঅ্যাপ (শুধুমাত্র জরুরি)',

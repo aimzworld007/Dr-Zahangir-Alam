@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, MapPin, Phone, Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, MapPin, Phone, Facebook, Linkedin, Twitter, Instagram, Clock } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Contact() {
@@ -16,7 +16,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Address */}
           <div className="bg-white rounded-[2rem] p-10 shadow-lg shadow-black/5 border border-[#dee2e6] text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div className="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-[#f8f9fa] text-[var(--color-primary)] mb-8 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors duration-300">
@@ -34,12 +34,11 @@ export default function Contact() {
               <Phone className="h-8 w-8" />
             </div>
             <h3 className="text-2xl font-semibold text-[#212529] mb-4 font-serif">{t.contact.phone}</h3>
-            <p className="text-[#6b6b6b] mb-6 font-light leading-relaxed">
-              {t.contact.hoursDesc}
-            </p>
-            <a href="tel:01609472942" className="text-xl font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors block">
-              01609472942
-            </a>
+            <div className="mb-6">
+              <a href="tel:01609472942" className="text-xl font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors block">
+                01609472942
+              </a>
+            </div>
             <div className="mt-6 pt-6 border-t border-[#dee2e6]">
               <p className="text-sm text-[#6b6b6b] mb-2 font-medium">{t.contact.whatsappEmergency}</p>
               <a href="https://wa.me/8801775193265" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-green-600 hover:text-green-700 transition-colors">
@@ -57,9 +56,25 @@ export default function Contact() {
             <p className="text-[#6b6b6b] mb-6 font-light leading-relaxed">
               {t.contact.emergencyDesc}
             </p>
-            <a href="mailto:zahangir.somc@gmail.com" className="text-lg font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors">
+            <a href="mailto:zahangir.somc@gmail.com" className="text-lg font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors break-all">
               zahangir.somc@gmail.com
             </a>
+          </div>
+
+          {/* Consultation Hours */}
+          <div className="bg-white rounded-[2rem] p-10 shadow-lg shadow-black/5 border border-[#dee2e6] text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div className="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-[#f8f9fa] text-[var(--color-primary)] mb-8 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors duration-300">
+              <Clock className="h-8 w-8" />
+            </div>
+            <h3 className="text-2xl font-semibold text-[#212529] mb-4 font-serif">{t.contact.hours}</h3>
+            <div className="flex flex-col gap-3 text-left">
+              {t.contact.hoursList.map((item, index) => (
+                <div key={index} className="flex justify-between items-center border-b border-[#dee2e6] pb-2 last:border-0 last:pb-0">
+                  <span className="text-[#6b6b6b] font-medium">{item.day}</span>
+                  <span className="text-[var(--color-primary)] font-semibold">{item.time}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

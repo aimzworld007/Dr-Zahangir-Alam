@@ -9,8 +9,10 @@ import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Home() {
   const [text, setText] = useState('');
+  const [degreeText, setDegreeText] = useState('');
   const { t, lang } = useLanguage();
   const fullText = t.hero.typewriter;
+  const fullDegreeText = t.hero.degrees;
   
   useEffect(() => {
     let i = 0;
@@ -25,6 +27,20 @@ export default function Home() {
     }, 50);
     return () => clearInterval(timer);
   }, [fullText]);
+
+  useEffect(() => {
+    let i = 0;
+    setDegreeText('');
+    const timer = setInterval(() => {
+      if (i < fullDegreeText.length) {
+        setDegreeText(fullDegreeText.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 50);
+    return () => clearInterval(timer);
+  }, [fullDegreeText]);
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] selection:bg-primary/20">
@@ -44,13 +60,16 @@ export default function Home() {
                 <span className="block text-3xl md:text-5xl text-[#495057] font-medium mt-4 tracking-tight font-serif">
                   {t.hero.nameBangla}
                 </span>
+                <span className="block text-xl md:text-2xl text-[var(--color-primary)] font-medium mt-4 tracking-tight font-sans min-h-[2rem] md:min-h-[2.5rem]">
+                  {degreeText}<span className="typewriter-cursor">|</span>
+                </span>
               </motion.h1>
               
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="text-xl text-[#6b6b6b] max-w-xl leading-relaxed font-light h-16"
+                className="text-xl text-[#6b6b6b] max-w-xl leading-relaxed font-light min-h-[4rem]"
               >
                 <span className="text-[var(--color-primary)] font-medium">{text}</span>
                 <span className="typewriter-cursor text-[var(--color-primary)]">|</span>
