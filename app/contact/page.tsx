@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -50,6 +50,25 @@ export default function Contact() {
             </p>
             <a href="mailto:zahangir.somc@gmail.com" className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors">
               zahangir.somc@gmail.com
+            </a>
+          </div>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="mt-16 bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center">
+          <h3 className="text-2xl font-bold text-slate-900 mb-6">Connect With Us</h3>
+          <div className="flex justify-center space-x-6">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-600 transition-colors" aria-label="Facebook">
+              <Facebook className="h-8 w-8" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-700 transition-colors" aria-label="LinkedIn">
+              <Linkedin className="h-8 w-8" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-500 transition-colors" aria-label="Twitter">
+              <Twitter className="h-8 w-8" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-pink-600 transition-colors" aria-label="Instagram">
+              <Instagram className="h-8 w-8" />
             </a>
           </div>
         </div>

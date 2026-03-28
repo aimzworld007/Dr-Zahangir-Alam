@@ -20,9 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
+      <body className={`${inter.className} bg-slate-50 text-slate-900 antialiased min-h-screen flex flex-col selection:bg-blue-200 selection:text-blue-900`} suppressHydrationWarning>
+        {/* Subtle background pattern */}
+        <div className="fixed inset-0 z-[-1] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+        
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow pt-24">
           {children}
         </main>
         <Footer />

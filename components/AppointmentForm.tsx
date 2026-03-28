@@ -26,18 +26,21 @@ export default function AppointmentForm() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/api/appointments', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      // Format the message for WhatsApp
+      const message = `*New Appointment Request*
+Name: ${data.patientName}
+Phone: ${data.phone}
+${data.email ? `Email: ${data.email}\n` : ''}Date & Time: ${new Date(data.dateTime).toLocaleString()}
+Problem: ${data.problemDescription}`;
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to book appointment');
-      }
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/8801775193265?text=${encodedMessage}`;
+
+      // Simulate a brief delay for UX
+      await new Promise((resolve) => setTimeout(resolve, 800));
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
 
       setSubmitStatus('success');
       reset();
@@ -57,8 +60,8 @@ export default function AppointmentForm() {
         <div className="mb-6 bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 flex items-start">
           <CheckCircle2 className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
           <div>
-            <h3 className="font-medium">Appointment Request Sent!</h3>
-            <p className="text-sm mt-1">We have received your request and will contact you shortly to confirm the details.</p>
+            <h3 className="font-medium">Redirecting to WhatsApp!</h3>
+            <p className="text-sm mt-1">Please send the pre-filled message to confirm your appointment request.</p>
           </div>
         </div>
       )}
@@ -153,10 +156,10 @@ export default function AppointmentForm() {
           {isSubmitting ? (
             <>
               <Loader2 className="animate-spin -ml-1 mr-2 h-5 w-5" />
-              Submitting...
+              Redirecting...
             </>
           ) : (
-            'Confirm Appointment'
+            'Book via WhatsApp'
           )}
         </button>
       </form>
