@@ -131,10 +131,10 @@ export const en = {
     phone: 'Serial Number',
     email: 'Email',
     hours: 'Consultation Hours',
-    hoursDesc: '3:00 PM to 11:00 PM',
+    hoursDesc: '4:00 PM to 11:00 PM',
     hoursList: [
-      { day: 'Saturday - Thursday', time: '3:00 PM - 11:00 PM' },
-      { day: 'Friday', time: 'Closed' }
+      { day: 'Thursday & Friday', time: '4:00 PM - 11:00 PM' },
+      { day: 'Saturday - Wednesday', time: 'Closed' }
     ],
     emergency: 'Emergency Cases',
     emergencyDesc: 'For severe trauma or medical emergencies, please proceed to the nearest hospital emergency department immediately.',
@@ -275,10 +275,10 @@ export const bn = {
     phone: 'সিরিয়াল',
     email: 'ইমেইল',
     hours: 'রোগী দেখার সময়',
-    hoursDesc: 'বিকাল ৩.০০ থেকে রাত ১১.০০ টা পর্যন্ত',
+    hoursDesc: 'বিকাল ৪.০০ থেকে রাত ১১.০০ টা পর্যন্ত',
     hoursList: [
-      { day: 'শনিবার - বৃহস্পতিবার', time: 'বিকাল ৩:০০ - রাত ১১:০০' },
-      { day: 'শুক্রবার', time: 'বন্ধ' }
+      { day: 'বৃহস্পতিবার ও শুক্রবার', time: 'বিকাল ৪:০০ - রাত ১১:০০' },
+      { day: 'শনিবার - বুধবার', time: 'বন্ধ' }
     ],
     emergency: 'জরুরি অবস্থা',
     emergencyDesc: 'যেকোনো গুরুতর দুর্ঘটনা বা ইমার্জেন্সির ক্ষেত্রে দ্রুত নিকটস্থ হাসপাতালের জরুরি বিভাগে যোগাযোগ করুন।',
