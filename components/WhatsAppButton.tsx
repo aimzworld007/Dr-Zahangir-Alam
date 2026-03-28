@@ -1,7 +1,11 @@
+'use client';
+
 import Link from 'next/link';
 import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function WhatsAppButton() {
+  const { t } = useLanguage();
   const phoneNumber = '8801775193265';
   const message = 'Hello Doctor, I would like to book an appointment';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -16,7 +20,7 @@ export default function WhatsAppButton() {
     >
       <MessageCircle className="w-6 h-6" />
       <span className="absolute right-full mr-4 bg-gray-900 text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-        Chat with us
+        {t.whatsapp.chat}
       </span>
     </Link>
   );

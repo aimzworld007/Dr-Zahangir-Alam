@@ -1,86 +1,95 @@
+'use client';
+
 import { Mail, MapPin, Phone, Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
-    <div className="bg-slate-50 min-h-screen py-16">
+    <div className="bg-[#f8f9fa] min-h-screen py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Get in Touch</h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            We are here to help. Reach out to us for any inquiries or to schedule a consultation.
+        <div className="text-center mb-20">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#212529] mb-6 font-serif tracking-tight">{t.contact.title}</h1>
+          <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto font-light leading-relaxed">
+            {t.contact.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Address */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow">
-            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-50 text-blue-600 mb-6">
+          <div className="bg-white rounded-[2rem] p-10 shadow-lg shadow-black/5 border border-[#dee2e6] text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div className="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-[#f8f9fa] text-[var(--color-primary)] mb-8 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors duration-300">
               <MapPin className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-2">Location</h3>
-            <p className="text-slate-600">
-              Directorate General of Health Services<br />
-              Mohakhali, Banani, Dhaka<br />
-              Bangladesh
+            <h3 className="text-2xl font-semibold text-[#212529] mb-4 font-serif">{t.contact.address}</h3>
+            <p className="text-[#6b6b6b] font-light leading-relaxed">
+              {t.contact.addressDesc}
             </p>
           </div>
 
           {/* Phone */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow">
-            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-50 text-green-600 mb-6">
+          <div className="bg-white rounded-[2rem] p-10 shadow-lg shadow-black/5 border border-[#dee2e6] text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div className="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-[#f8f9fa] text-[var(--color-primary)] mb-8 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors duration-300">
               <Phone className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-2">Phone</h3>
-            <p className="text-slate-600 mb-4">
-              Call or WhatsApp us for immediate assistance.
+            <h3 className="text-2xl font-semibold text-[#212529] mb-4 font-serif">{t.contact.phone}</h3>
+            <p className="text-[#6b6b6b] mb-6 font-light leading-relaxed">
+              {t.contact.hoursDesc}
             </p>
-            <a href="tel:+8801775193265" className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors">
-              +880 1775-193265
+            <a href="tel:01609472942" className="text-xl font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors block">
+              01609472942
             </a>
+            <div className="mt-6 pt-6 border-t border-[#dee2e6]">
+              <p className="text-sm text-[#6b6b6b] mb-2 font-medium">{t.contact.whatsappEmergency}</p>
+              <a href="https://wa.me/8801775193265" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-green-600 hover:text-green-700 transition-colors">
+                +880 1775-193265
+              </a>
+            </div>
           </div>
 
           {/* Email */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow">
-            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-50 text-blue-600 mb-6">
+          <div className="bg-white rounded-[2rem] p-10 shadow-lg shadow-black/5 border border-[#dee2e6] text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div className="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-[#f8f9fa] text-[var(--color-primary)] mb-8 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors duration-300">
               <Mail className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-2">Email</h3>
-            <p className="text-slate-600 mb-4">
-              Send us an email and we&apos;ll get back to you soon.
+            <h3 className="text-2xl font-semibold text-[#212529] mb-4 font-serif">{t.contact.email}</h3>
+            <p className="text-[#6b6b6b] mb-6 font-light leading-relaxed">
+              {t.contact.emergencyDesc}
             </p>
-            <a href="mailto:zahangir.somc@gmail.com" className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors">
+            <a href="mailto:zahangir.somc@gmail.com" className="text-lg font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors">
               zahangir.somc@gmail.com
             </a>
           </div>
         </div>
 
         {/* Social Media Links */}
-        <div className="mt-16 bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6">Connect With Us</h3>
-          <div className="flex justify-center space-x-6">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-600 transition-colors" aria-label="Facebook">
-              <Facebook className="h-8 w-8" />
+        <div className="mt-16 bg-white rounded-[2rem] p-12 shadow-lg shadow-black/5 border border-[#dee2e6] text-center">
+          <h3 className="text-3xl font-bold text-[#212529] mb-8 font-serif">Connect With Us</h3>
+          <div className="flex justify-center gap-6">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="h-14 w-14 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#6b6b6b] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1" aria-label="Facebook">
+              <Facebook className="h-6 w-6" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-700 transition-colors" aria-label="LinkedIn">
-              <Linkedin className="h-8 w-8" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-14 w-14 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#6b6b6b] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1" aria-label="LinkedIn">
+              <Linkedin className="h-6 w-6" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-500 transition-colors" aria-label="Twitter">
-              <Twitter className="h-8 w-8" />
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="h-14 w-14 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#6b6b6b] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1" aria-label="Twitter">
+              <Twitter className="h-6 w-6" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-pink-600 transition-colors" aria-label="Instagram">
-              <Instagram className="h-8 w-8" />
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="h-14 w-14 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#6b6b6b] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1" aria-label="Instagram">
+              <Instagram className="h-6 w-6" />
             </a>
           </div>
         </div>
 
         {/* Map Placeholder */}
-        <div className="mt-16 bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden h-96 relative flex items-center justify-center">
-          <div className="absolute inset-0 bg-slate-200">
+        <div className="mt-16 bg-white rounded-[2rem] shadow-lg shadow-black/5 border border-[#dee2e6] overflow-hidden h-[400px] relative flex items-center justify-center group">
+          <div className="absolute inset-0 bg-[#e9ecef] transition-colors duration-500 group-hover:bg-[#dee2e6]">
             {/* Embed Google Maps iframe here in production */}
-            <div className="w-full h-full flex flex-col items-center justify-center text-slate-500">
-              <MapPin className="h-12 w-12 mb-4 opacity-50" />
-              <p className="text-lg font-medium">Interactive Map View</p>
-              <p className="text-sm">Mohakhali, Banani, Dhaka</p>
+            <div className="w-full h-full flex flex-col items-center justify-center text-[#6b6b6b]">
+              <MapPin className="h-12 w-12 mb-4 opacity-50 group-hover:scale-110 transition-transform duration-500 group-hover:text-[var(--color-primary)]" />
+              <p className="text-xl font-medium font-serif text-[#212529]">Interactive Map View</p>
+              <p className="text-base font-light mt-2">{t.contact.addressDesc}</p>
             </div>
           </div>
         </div>

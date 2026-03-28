@@ -5,8 +5,10 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { appointmentSchema, AppointmentFormData } from '@/lib/validations/appointment';
 import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function AppointmentForm() {
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -53,113 +55,113 @@ Problem: ${data.problemDescription}`;
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
-      <h2 className="text-2xl font-bold text-slate-900 mb-6">Book an Appointment</h2>
+    <div className="bg-white rounded-[2rem] shadow-lg shadow-black/5 border border-[#dee2e6] p-10 md:p-12">
+      <h2 className="text-3xl font-bold text-[#212529] mb-8 font-serif">{t.appointment.title}</h2>
       
       {submitStatus === 'success' && (
-        <div className="mb-6 bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 flex items-start">
-          <CheckCircle2 className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
+        <div className="mb-8 bg-[#f8f9fa] border border-[var(--color-primary)] text-[var(--color-primary)] rounded-2xl p-6 flex items-start shadow-sm">
+          <CheckCircle2 className="w-6 h-6 mr-4 mt-0.5 flex-shrink-0" />
           <div>
-            <h3 className="font-medium">Redirecting to WhatsApp!</h3>
-            <p className="text-sm mt-1">Please send the pre-filled message to confirm your appointment request.</p>
+            <h3 className="font-semibold text-lg">{t.appointment.form.successTitle}</h3>
+            <p className="text-[#6b6b6b] mt-1 font-light">{t.appointment.form.successDesc}</p>
           </div>
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="mb-6 bg-red-50 border border-red-200 text-red-800 rounded-lg p-4 flex items-start">
-          <AlertCircle className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
+        <div className="mb-8 bg-red-50 border border-red-200 text-red-800 rounded-2xl p-6 flex items-start shadow-sm">
+          <AlertCircle className="w-6 h-6 mr-4 mt-0.5 flex-shrink-0" />
           <div>
-            <h3 className="font-medium">Error</h3>
-            <p className="text-sm mt-1">{errorMessage}</p>
+            <h3 className="font-semibold text-lg">Error</h3>
+            <p className="text-red-700 mt-1 font-light">{errorMessage}</p>
           </div>
         </div>
       )}
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <label htmlFor="patientName" className="block text-sm font-medium text-slate-700 mb-1">
-              Patient Name *
+            <label htmlFor="patientName" className="block text-sm font-medium text-[#495057] mb-2">
+              {t.appointment.form.name} *
             </label>
             <input
               type="text"
               id="patientName"
               {...register('patientName')}
-              className={`w-full rounded-md border ${errors.patientName ? 'border-red-500' : 'border-slate-300'} px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-              placeholder="Full Name"
+              className={`w-full rounded-xl border ${errors.patientName ? 'border-red-500' : 'border-[#dee2e6]'} px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all duration-300 bg-[#f8f9fa] hover:bg-white`}
+              placeholder={t.appointment.form.namePlaceholder}
             />
-            {errors.patientName && <p className="mt-1 text-sm text-red-500">{errors.patientName.message}</p>}
+            {errors.patientName && <p className="mt-2 text-sm text-red-500">{errors.patientName.message}</p>}
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">
-              Phone Number *
+            <label htmlFor="phone" className="block text-sm font-medium text-[#495057] mb-2">
+              {t.appointment.form.phone} *
             </label>
             <input
               type="tel"
               id="phone"
               {...register('phone')}
-              className={`w-full rounded-md border ${errors.phone ? 'border-red-500' : 'border-slate-300'} px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-              placeholder="e.g., 01775193265"
+              className={`w-full rounded-xl border ${errors.phone ? 'border-red-500' : 'border-[#dee2e6]'} px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all duration-300 bg-[#f8f9fa] hover:bg-white`}
+              placeholder={t.appointment.form.phonePlaceholder}
             />
-            {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>}
+            {errors.phone && <p className="mt-2 text-sm text-red-500">{errors.phone.message}</p>}
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
+            <label htmlFor="email" className="block text-sm font-medium text-[#495057] mb-2">
               Email (Optional)
             </label>
             <input
               type="email"
               id="email"
               {...register('email')}
-              className={`w-full rounded-md border ${errors.email ? 'border-red-500' : 'border-slate-300'} px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`w-full rounded-xl border ${errors.email ? 'border-red-500' : 'border-[#dee2e6]'} px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all duration-300 bg-[#f8f9fa] hover:bg-white`}
               placeholder="your@email.com"
             />
-            {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
+            {errors.email && <p className="mt-2 text-sm text-red-500">{errors.email.message}</p>}
           </div>
 
           <div>
-            <label htmlFor="dateTime" className="block text-sm font-medium text-slate-700 mb-1">
-              Preferred Date & Time *
+            <label htmlFor="dateTime" className="block text-sm font-medium text-[#495057] mb-2">
+              {t.appointment.form.date} *
             </label>
             <input
               type="datetime-local"
               id="dateTime"
               {...register('dateTime')}
-              className={`w-full rounded-md border ${errors.dateTime ? 'border-red-500' : 'border-slate-300'} px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`w-full rounded-xl border ${errors.dateTime ? 'border-red-500' : 'border-[#dee2e6]'} px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all duration-300 bg-[#f8f9fa] hover:bg-white`}
             />
-            {errors.dateTime && <p className="mt-1 text-sm text-red-500">{errors.dateTime.message}</p>}
+            {errors.dateTime && <p className="mt-2 text-sm text-red-500">{errors.dateTime.message}</p>}
           </div>
         </div>
 
         <div>
-          <label htmlFor="problemDescription" className="block text-sm font-medium text-slate-700 mb-1">
-            Problem Description *
+          <label htmlFor="problemDescription" className="block text-sm font-medium text-[#495057] mb-2">
+            {t.appointment.form.message} *
           </label>
           <textarea
             id="problemDescription"
-            rows={4}
+            rows={5}
             {...register('problemDescription')}
-            className={`w-full rounded-md border ${errors.problemDescription ? 'border-red-500' : 'border-slate-300'} px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500`}
-            placeholder="Please briefly describe your symptoms or reason for visit..."
+            className={`w-full rounded-xl border ${errors.problemDescription ? 'border-red-500' : 'border-[#dee2e6]'} px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all duration-300 bg-[#f8f9fa] hover:bg-white resize-none`}
+            placeholder={t.appointment.form.messagePlaceholder}
           ></textarea>
-          {errors.problemDescription && <p className="mt-1 text-sm text-red-500">{errors.problemDescription.message}</p>}
+          {errors.problemDescription && <p className="mt-2 text-sm text-red-500">{errors.problemDescription.message}</p>}
         </div>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-70 disabled:cursor-not-allowed transition-colors"
+          className="w-full flex justify-center items-center py-4 px-6 rounded-xl shadow-md shadow-[var(--color-primary)]/20 text-lg font-medium text-white bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary)] disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="animate-spin -ml-1 mr-2 h-5 w-5" />
-              Redirecting...
+              <Loader2 className="animate-spin -ml-1 mr-3 h-6 w-6" />
+              {t.appointment.form.submitting}
             </>
           ) : (
-            'Book via WhatsApp'
+            t.appointment.form.submit
           )}
         </button>
       </form>

@@ -1,156 +1,119 @@
 'use client';
 
-import { CheckCircle2, Award, BookOpen, MapPin, Briefcase, User, Calendar } from 'lucide-react';
-import { motion } from 'motion/react';
+import { CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
-    <div className="min-h-screen py-16">
+    <div className="bg-[#f8f9fa] min-h-screen py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">About Dr. Jahangir</h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            A dedicated medical professional with a focus on Orthopedic & Trauma Care, committed to improving patient lives.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          {/* Main Profile Card */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:col-span-8 bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-slate-200/60"
-          >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                <User className="w-6 h-6" />
+        <div className="bg-white rounded-[2rem] shadow-lg shadow-black/5 border border-[#dee2e6] overflow-hidden">
+          <div className="p-10 md:p-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#212529] mb-12 border-b border-[#dee2e6] pb-8 font-serif tracking-tight">{t.about.title}</h1>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              {/* Profile Overview */}
+              <div>
+                <h2 className="text-2xl font-semibold text-[#212529] mb-8 font-serif">Professional Profile</h2>
+                <ul className="space-y-6 text-[#495057] font-light">
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">Name:</span>
+                    <span>{t.hero.name} {t.hero.nameBangla}</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">Designation:</span>
+                    <span>Assistant Surgeon / Medical Officer</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">Current Role:</span>
+                    <span>{t.hero.badgeStatus}</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">Organization:</span>
+                    <span>Chittagong Medical College Hospital</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">Joining Date:</span>
+                    <span>01-06-2023</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">District:</span>
+                    <span>Khagrachari</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">BCS Batch:</span>
+                    <span>39</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">HRIS ID:</span>
+                    <span>166027</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-medium w-36 flex-shrink-0 text-[#212529]">Code:</span>
+                    <span>138648</span>
+                  </li>
+                </ul>
               </div>
-              <h2 className="text-2xl font-bold text-slate-900">Professional Profile</h2>
+
+              {/* Education & Training */}
+              <div className="space-y-12">
+                <div>
+                  <h2 className="text-2xl font-semibold text-[#212529] mb-8 font-serif">{t.aboutSnippet.educationTitle}</h2>
+                  <div className="bg-[#f8f9fa] rounded-2xl p-6 border border-[#dee2e6] hover:shadow-md transition-shadow duration-300">
+                    <div className="flex items-start">
+                      <CheckCircle2 className="w-6 h-6 text-[var(--color-primary)] mt-0.5 mr-4 flex-shrink-0" />
+                      <div>
+                        <h3 className="font-medium text-[#212529] text-lg">MBBS (2015)</h3>
+                        <p className="text-[#6b6b6b] font-light mt-1">Sylhet MAG Osmani Medical College</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-semibold text-[#212529] mb-8 font-serif">Postgraduate / Training</h2>
+                  <div className="space-y-6">
+                    <div className="bg-[#f8f9fa] rounded-2xl p-6 border border-[#dee2e6] hover:shadow-md transition-shadow duration-300">
+                      <div className="flex items-start">
+                        <CheckCircle2 className="w-6 h-6 text-[var(--color-primary)] mt-0.5 mr-4 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-medium text-[#212529] text-lg">MS in Orthopedic Surgery ({t.hero.badgeStatus})</h3>
+                          <p className="text-[#6b6b6b] font-light mt-1">Chattogram Medical College (2023 - 2026)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-[#f8f9fa] rounded-2xl p-6 border border-[#dee2e6] hover:shadow-md transition-shadow duration-300">
+                      <div className="flex items-start">
+                        <CheckCircle2 className="w-6 h-6 text-[var(--color-primary)] mt-0.5 mr-4 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-medium text-[#212529] text-lg">MS in Orthopedic Surgery ({t.hero.badgeStatus})</h3>
+                          <p className="text-[#6b6b6b] font-light mt-1">Chattogram Medical College (2020 - 2022)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8">
-              <div className="space-y-1">
-                <p className="text-sm font-medium text-slate-500 flex items-center gap-2">
-                  <Briefcase className="w-4 h-4" /> Designation
-                </p>
-                <p className="text-slate-900 font-medium">Assistant Surgeon / Medical Officer</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-sm font-medium text-slate-500 flex items-center gap-2">
-                  <Award className="w-4 h-4" /> Current Role
-                </p>
-                <p className="text-slate-900 font-medium">OSD (Additional), Study Deputation</p>
-              </div>
-              <div className="space-y-1 sm:col-span-2">
-                <p className="text-sm font-medium text-slate-500 flex items-center gap-2">
-                  <MapPin className="w-4 h-4" /> Organization
-                </p>
-                <p className="text-slate-900 font-medium">Directorate General of Health Services, Mohakhali, Banani, Dhaka</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-sm font-medium text-slate-500 flex items-center gap-2">
-                  <Calendar className="w-4 h-4" /> Joining Date
-                </p>
-                <p className="text-slate-900 font-medium">01-06-2023</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-sm font-medium text-slate-500 flex items-center gap-2">
-                  <MapPin className="w-4 h-4" /> District
-                </p>
-                <p className="text-slate-900 font-medium">Khagrachari</p>
+            <div className="mt-16 pt-12 border-t border-[#dee2e6]">
+              <h2 className="text-2xl font-semibold text-[#212529] mb-6 font-serif">{t.about.biography}</h2>
+              <div className="space-y-6 text-[#495057] font-light leading-relaxed">
+                <p>{t.about.p1}</p>
+                <p>{t.about.p2}</p>
+                <p>{t.about.p3}</p>
               </div>
             </div>
-          </motion.div>
-
-          {/* IDs Card */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="md:col-span-4 bg-slate-900 rounded-[2rem] p-8 md:p-10 shadow-lg text-white relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
-            <h2 className="text-xl font-bold mb-8 relative z-10">Registration Details</h2>
             
-            <div className="space-y-6 relative z-10">
-              <div>
-                <p className="text-slate-400 text-sm mb-1">BCS Batch</p>
-                <p className="text-2xl font-bold text-white">39<span className="text-blue-400 text-lg">th</span></p>
-              </div>
-              <div className="h-px w-full bg-slate-800"></div>
-              <div>
-                <p className="text-slate-400 text-sm mb-1">HRIS ID</p>
-                <p className="text-xl font-mono text-slate-200 tracking-wider">166027</p>
-              </div>
-              <div className="h-px w-full bg-slate-800"></div>
-              <div>
-                <p className="text-slate-400 text-sm mb-1">Code</p>
-                <p className="text-xl font-mono text-slate-200 tracking-wider">138648</p>
-              </div>
+            <div className="mt-12 bg-[#f8f9fa] rounded-2xl p-8 border border-[#dee2e6]">
+              <h2 className="text-2xl font-semibold text-[#212529] mb-4 font-serif">{t.about.missionTitle}</h2>
+              <p className="text-[#495057] font-light leading-relaxed italic">
+                &quot;{t.about.missionDesc}&quot;
+              </p>
             </div>
-          </motion.div>
-
-          {/* Education Card */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="md:col-span-12 bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-slate-200/60 mt-2"
-          >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center">
-                <BookOpen className="w-6 h-6" />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-900">Education & Training</h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-blue-200 transition-colors group">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-white p-2 rounded-full shadow-sm text-blue-600 group-hover:scale-110 transition-transform">
-                    <CheckCircle2 className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-lg">MBBS</h3>
-                    <p className="text-blue-600 font-medium text-sm mb-2">2015</p>
-                    <p className="text-slate-600 text-sm leading-relaxed">Sylhet MAG Osmani Medical College</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-green-200 transition-colors group">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-white p-2 rounded-full shadow-sm text-green-600 group-hover:scale-110 transition-transform">
-                    <CheckCircle2 className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-lg">MS Orthopedic Surgery</h3>
-                    <p className="text-green-600 font-medium text-sm mb-2">2020 - 2022</p>
-                    <p className="text-slate-600 text-sm leading-relaxed">Chattogram Medical College<br/>(Study Deputation)</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-green-200 transition-colors group">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-white p-2 rounded-full shadow-sm text-green-600 group-hover:scale-110 transition-transform">
-                    <CheckCircle2 className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-lg">MS Orthopedic Surgery</h3>
-                    <p className="text-green-600 font-medium text-sm mb-2">2023 - 2026</p>
-                    <p className="text-slate-600 text-sm leading-relaxed">Chattogram Medical College<br/>(Study Deputation)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
