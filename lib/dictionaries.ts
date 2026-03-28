@@ -95,30 +95,74 @@ export const en = {
   services: {
     title: 'Specialized Services',
     subtitle: 'Comprehensive orthopedic care tailored to your specific needs.',
+    detailsLabels: {
+      conditionTreated: 'Condition Treated',
+      procedure: 'Procedure',
+      benefits: 'Benefits',
+      recoveryExpectations: 'Recovery Expectations',
+      close: 'Close',
+      learnMore: 'Learn More'
+    },
     items: [
       {
         title: 'Trauma & Fracture Care',
         desc: 'Expert management of complex fractures, dislocations, and sports injuries using advanced surgical and non-surgical techniques.',
+        details: {
+          conditionTreated: 'Complex fractures, joint dislocations, and severe sports injuries.',
+          procedure: 'Advanced surgical fixation, casting, and minimally invasive techniques to align and stabilize bones.',
+          benefits: 'Restores proper bone alignment, reduces pain, and promotes faster healing.',
+          recoveryExpectations: 'Varies by injury severity; typically involves physical therapy and gradual return to activities over weeks to months.'
+        }
       },
       {
         title: 'Joint Replacement',
         desc: 'Surgical procedures to replace damaged joints with artificial implants, relieving pain and restoring function.',
+        details: {
+          conditionTreated: 'Severe arthritis, joint degeneration, and irreparable joint damage.',
+          procedure: 'Removal of damaged cartilage and bone, followed by the insertion of high-quality artificial joint implants.',
+          benefits: 'Significant pain relief, improved joint mobility, and enhanced overall quality of life.',
+          recoveryExpectations: 'Requires post-operative physical therapy; most patients resume normal daily activities within 3 to 6 months.'
+        }
       },
       {
         title: 'Arthroscopic Surgery',
         desc: 'Minimally invasive procedures to diagnose and treat joint problems, resulting in faster recovery times.',
+        details: {
+          conditionTreated: 'Meniscus tears, ligament injuries (e.g., ACL), and early-stage joint issues.',
+          procedure: 'Use of a small camera (arthroscope) and specialized instruments inserted through tiny incisions to repair joint damage.',
+          benefits: 'Less tissue damage, reduced post-operative pain, and quicker return to normal activities compared to open surgery.',
+          recoveryExpectations: 'Generally faster recovery; many patients return to light activities within a few weeks.'
+        }
       },
       {
         title: 'Spine Care',
         desc: 'Evaluation and treatment of spinal conditions, including herniated discs, spinal stenosis, and back pain.',
+        details: {
+          conditionTreated: 'Herniated discs, spinal stenosis, sciatica, and chronic back or neck pain.',
+          procedure: 'Ranging from conservative management (medication, physical therapy) to surgical interventions like discectomy or spinal fusion.',
+          benefits: 'Relief from nerve compression, reduced pain, and improved spinal stability.',
+          recoveryExpectations: 'Depends on the specific treatment; surgical recovery may take several months with guided rehabilitation.'
+        }
       },
       {
         title: 'Pediatric Orthopedics',
         desc: 'Specialized care for children with musculoskeletal problems, including congenital deformities and growth-related issues.',
+        details: {
+          conditionTreated: 'Clubfoot, scoliosis, congenital limb deformities, and growth plate injuries.',
+          procedure: 'Tailored treatments ranging from bracing and casting to specialized corrective surgeries for growing bones.',
+          benefits: 'Corrects deformities early, ensures proper growth, and prevents long-term musculoskeletal complications.',
+          recoveryExpectations: 'Highly variable; requires close monitoring throughout the child\'s growth and development phases.'
+        }
       },
       {
         title: 'Sports Medicine',
         desc: 'Treatment and prevention of sports-related injuries, helping athletes return to their peak performance safely.',
+        details: {
+          conditionTreated: 'Sprains, strains, tendonitis, ligament tears, and overuse injuries.',
+          procedure: 'Comprehensive care including physical therapy, bracing, biologic treatments (like PRP), and minimally invasive surgeries if needed.',
+          benefits: 'Safe and effective return to sports, prevention of future injuries, and optimization of athletic performance.',
+          recoveryExpectations: 'Customized rehabilitation plans aimed at restoring full strength and agility, timeline depends on the specific injury.'
+        }
       }
     ]
   },
@@ -239,30 +283,74 @@ export const bn = {
   services: {
     title: 'বিশেষায়িত সেবাসমূহ',
     subtitle: 'আপনার প্রয়োজন অনুযায়ী সব ধরনের আধুনিক অর্থোপেডিক চিকিৎসা।',
+    detailsLabels: {
+      conditionTreated: 'যে রোগের চিকিৎসা করা হয়',
+      procedure: 'চিকিৎসা পদ্ধতি',
+      benefits: 'সুবিধাসমূহ',
+      recoveryExpectations: 'সুস্থ হওয়ার প্রত্যাশা',
+      close: 'বন্ধ করুন',
+      learnMore: 'বিস্তারিত জানুন'
+    },
     items: [
       {
         title: 'ট্রমা ও ফ্র্যাকচার কেয়ার',
         desc: 'আধুনিক সার্জিক্যাল ও নন-সার্জিক্যাল পদ্ধতিতে জটিল হাড় ভাঙা, জয়েন্ট সরে যাওয়া এবং স্পোর্টস ইনজুরির উন্নত চিকিৎসা।',
+        details: {
+          conditionTreated: 'জটিল হাড় ভাঙা, জয়েন্ট সরে যাওয়া এবং গুরুতর স্পোর্টস ইনজুরি।',
+          procedure: 'হাড় সোজা এবং স্থিতিশীল করার জন্য উন্নত সার্জিক্যাল ফিক্সেশন, কাস্টিং এবং মিনিমালি ইনভেসিভ পদ্ধতি।',
+          benefits: 'হাড়ের সঠিক অবস্থান ফিরিয়ে আনে, ব্যথা কমায় এবং দ্রুত সুস্থ হতে সাহায্য করে।',
+          recoveryExpectations: 'আঘাতের তীব্রতার ওপর নির্ভর করে; সাধারণত ফিজিক্যাল থেরাপি এবং কয়েক সপ্তাহ থেকে কয়েক মাসের মধ্যে স্বাভাবিক কার্যক্রমে ফিরে আসা সম্ভব হয়।'
+        }
       },
       {
         title: 'জয়েন্ট রিপ্লেসমেন্ট',
         desc: 'ক্ষতিগ্রস্ত জয়েন্ট পরিবর্তন করে কৃত্রিম জয়েন্ট স্থাপনের মাধ্যমে ব্যথা নিরাময় ও স্বাভাবিক চলাফেরা নিশ্চিত করা।',
+        details: {
+          conditionTreated: 'তীব্র আর্থ্রাইটিস, জয়েন্টের ক্ষয় এবং অপূরণীয় জয়েন্টের ক্ষতি।',
+          procedure: 'ক্ষতিগ্রস্ত তরুণাস্থি এবং হাড় অপসারণ করে উচ্চমানের কৃত্রিম জয়েন্ট ইমপ্লান্ট স্থাপন।',
+          benefits: 'ব্যথা থেকে উল্লেখযোগ্য মুক্তি, জয়েন্টের গতিশীলতা বৃদ্ধি এবং সামগ্রিক জীবনযাত্রার মান উন্নয়ন।',
+          recoveryExpectations: 'অস্ত্রোপচার পরবর্তী ফিজিক্যাল থেরাপি প্রয়োজন; বেশিরভাগ রোগী ৩ থেকে ৬ মাসের মধ্যে স্বাভাবিক দৈনন্দিন কাজ শুরু করতে পারেন।'
+        }
       },
       {
         title: 'আর্থ্রোস্কোপিক সার্জারি',
         desc: 'ছোট ছিদ্রের মাধ্যমে (Minimally Invasive) জয়েন্টের সমস্যা নির্ণয় ও চিকিৎসা, যা রোগীকে দ্রুত সুস্থ করে তোলে।',
+        details: {
+          conditionTreated: 'মেনিসকাস ছিঁড়ে যাওয়া, লিগামেন্ট ইনজুরি (যেমন- ACL) এবং জয়েন্টের প্রাথমিক পর্যায়ের সমস্যা।',
+          procedure: 'জয়েন্টের ক্ষতি মেরামতের জন্য ছোট ছিদ্রের মাধ্যমে একটি ছোট ক্যামেরা (আর্থ্রোস্কোপ) এবং বিশেষ যন্ত্রপাতি ব্যবহার করা হয়।',
+          benefits: 'ওপেন সার্জারির তুলনায় টিস্যুর কম ক্ষতি, অস্ত্রোপচার পরবর্তী ব্যথা কম এবং দ্রুত স্বাভাবিক কাজে ফেরা যায়।',
+          recoveryExpectations: 'সাধারণত দ্রুত সুস্থতা; অনেক রোগী কয়েক সপ্তাহের মধ্যেই হালকা কাজ শুরু করতে পারেন।'
+        }
       },
       {
         title: 'মেরুদণ্ডের চিকিৎসা (Spine Care)',
         desc: 'পিঠে ব্যথা, পিএলআইডি (PLID) বা হার্নিয়েটেড ডিস্কসহ মেরুদণ্ডের বিভিন্ন সমস্যার সঠিক মূল্যায়ন ও চিকিৎসা।',
+        details: {
+          conditionTreated: 'হার্নিয়েটেড ডিস্ক, স্পাইনাল স্টেনোসিস, সায়াটিকা এবং দীর্ঘস্থায়ী পিঠ বা ঘাড়ের ব্যথা।',
+          procedure: 'রক্ষণশীল ব্যবস্থাপনা (ওষুধ, ফিজিক্যাল থেরাপি) থেকে শুরু করে ডিসসেকটমি বা স্পাইনাল ফিউশনের মতো সার্জিক্যাল হস্তক্ষেপ।',
+          benefits: 'স্নায়ুর চাপ থেকে মুক্তি, ব্যথা হ্রাস এবং মেরুদণ্ডের স্থিতিশীলতা বৃদ্ধি।',
+          recoveryExpectations: 'নির্দিষ্ট চিকিৎসার ওপর নির্ভর করে; সার্জিক্যাল রিকভারিতে নির্দেশিত পুনর্বাসনের সাথে কয়েক মাস সময় লাগতে পারে।'
+        }
       },
       {
         title: 'পেডিয়াট্রিক অর্থোপেডিক্স',
         desc: 'শিশুদের জন্মগত হাড় বাঁকা, ক্লাবফুট (Clubfoot) এবং শারীরিক বৃদ্ধিজনিত যেকোনো হাড়ের সমস্যার বিশেষ চিকিৎসা।',
+        details: {
+          conditionTreated: 'ক্লাবফুট, স্কোলিওসিস, জন্মগত অঙ্গের বিকৃতি এবং গ্রোথ প্লেট ইনজুরি।',
+          procedure: 'ব্রেসিং এবং কাস্টিং থেকে শুরু করে ক্রমবর্ধমান হাড়ের জন্য বিশেষ সংশোধনমূলক সার্জারি পর্যন্ত কাস্টমাইজড চিকিৎসা।',
+          benefits: 'প্রাথমিক পর্যায়ে বিকৃতি সংশোধন করে, সঠিক বৃদ্ধি নিশ্চিত করে এবং দীর্ঘমেয়াদী পেশী ও হাড়ের জটিলতা প্রতিরোধ করে।',
+          recoveryExpectations: 'অত্যন্ত পরিবর্তনশীল; শিশুর বৃদ্ধি এবং বিকাশের পর্যায়গুলোতে নিবিড় পর্যবেক্ষণের প্রয়োজন হয়।'
+        }
       },
       {
         title: 'স্পোর্টস মেডিসিন',
         desc: 'খেলাধুলাজনিত আঘাতের চিকিৎসা ও প্রতিরোধ, যা খেলোয়াড়দের দ্রুত মাঠে ফিরতে সাহায্য করে।',
+        details: {
+          conditionTreated: 'মচকে যাওয়া, টান লাগা, টেন্ডিনাইটিস, লিগামেন্ট ছিঁড়ে যাওয়া এবং অতিরিক্ত ব্যবহারের ফলে সৃষ্ট ইনজুরি।',
+          procedure: 'ফিজিক্যাল থেরাপি, ব্রেসিং, বায়োলজিক চিকিৎসা (যেমন পিআরপি) এবং প্রয়োজনে মিনিমালি ইনভেসিভ সার্জারিসহ ব্যাপক যত্ন।',
+          benefits: 'নিরাপদ এবং কার্যকরভাবে খেলাধুলায় ফেরা, ভবিষ্যতের ইনজুরি প্রতিরোধ এবং অ্যাথলেটিক পারফরম্যান্স অপ্টিমাইজ করা।',
+          recoveryExpectations: 'সম্পূর্ণ শক্তি এবং ক্ষিপ্রতা পুনরুদ্ধারের লক্ষ্যে কাস্টমাইজড পুনর্বাসন পরিকল্পনা, সময়সীমা নির্দিষ্ট ইনজুরির ওপর নির্ভর করে।'
+        }
       }
     ]
   },
