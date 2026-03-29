@@ -36,7 +36,7 @@ ${data.email ? `Email: ${data.email}\n` : ''}Date & Time: ${new Date(data.dateTi
 Problem: ${data.problemDescription}`;
 
       const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/8801775193265?text=${encodedMessage}`;
+      const whatsappUrl = `https://wa.me/8801609472942?text=${encodedMessage}`;
 
       // Simulate a brief delay for UX
       await new Promise((resolve) => setTimeout(resolve, 800));

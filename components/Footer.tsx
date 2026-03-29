@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Instagram, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
 
@@ -12,12 +13,23 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 font-serif text-white tracking-tight">{t.hero.name}</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--color-primary)] shadow-sm bg-white">
+                <Image 
+                  src="https://www.shutterstock.com/image-vector/medical-snake-caduceus-logo-sign-600nw-1511110730.jpg" 
+                  alt="Dr. Md. Jahangir Alam Logo" 
+                  fill
+                  className="object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <h3 className="text-2xl font-bold font-serif text-white tracking-tight">{t.hero.name}</h3>
+            </div>
             <p className="text-[#adb5bd] mb-6 font-light leading-relaxed">
               {t.footer.description}
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-[#343a40] flex items-center justify-center text-[#adb5bd] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1DFeAA75qB/" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-[#343a40] flex items-center justify-center text-[#adb5bd] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-[#343a40] flex items-center justify-center text-[#adb5bd] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300" aria-label="LinkedIn">
@@ -61,7 +73,7 @@ export default function Footer() {
                 <div className="bg-[#343a40] p-2 rounded-lg group-hover:bg-green-500 transition-colors duration-300">
                   <MessageCircle className="w-4 h-4 text-[#adb5bd] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <a href="https://wa.me/8801775193265" target="_blank" rel="noopener noreferrer" className="ml-4 text-[#adb5bd] hover:text-green-500 transition-colors font-light">+880 1775-193265 (WhatsApp)</a>
+                <a href="https://wa.me/8801609472942" target="_blank" rel="noopener noreferrer" className="ml-4 text-[#adb5bd] hover:text-green-500 transition-colors font-light">+880 1609-472942 (WhatsApp)</a>
               </li>
               <li className="flex items-center group">
                 <div className="bg-[#343a40] p-2 rounded-lg group-hover:bg-[var(--color-primary)] transition-colors duration-300">
@@ -75,7 +87,9 @@ export default function Footer() {
         
         <div className="border-t border-[#343a40] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-[#6c757d] text-sm font-light">
           <p>&copy; {new Date().getFullYear()} {t.hero.name}. {t.footer.rights}</p>
-          <p className="mt-2 md:mt-0">Designed with precision and care.</p>
+          <p className="mt-2 md:mt-0">
+            ❤️ By <a href="https://aimzit.xyz" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary)] transition-colors">Aimz it</a>
+          </p>
         </div>
       </div>
     </footer>

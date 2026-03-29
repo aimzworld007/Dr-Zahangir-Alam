@@ -9,9 +9,9 @@ export const en = {
   hero: {
     acceptingPatients: 'Accepting New Patients',
     name: 'Dr. Md. Jahangir Alam',
-    nameBangla: '(মোঃ জাহাঙ্গীর আলম)',
+    shortName: 'Dr. Jahangir',
     degrees: 'MBBS, BCS (Health), MS (Orthopedic Surgery), CCD (BIRDEM)',
-    typewriter: 'Bone Fracture, Arthritis & Spine Specialist Surgeon',
+    typewriter: ['Bone Fracture', 'Arthritis', 'Spine Specialist Surgeon'],
     subtitle: 'Dedicated to restoring mobility and improving quality of life.',
     bookConsultation: 'Book Consultation',
     viewProfile: 'View Profile',
@@ -91,6 +91,39 @@ export const en = {
     p3: 'His approach to patient care is rooted in compassion and evidence-based medicine. He believes in educating his patients about their conditions and involving them in the decision-making process for their treatment plans.',
     missionTitle: 'My Mission',
     missionDesc: 'To provide accessible, high-quality orthopedic care that improves the quality of life for my patients through accurate diagnosis, advanced surgical techniques, and comprehensive rehabilitation.',
+    publicationsAndAwards: {
+      title: 'Publications & Awards',
+      publications: 'Publications',
+      awards: 'Awards & Honors',
+      publicationList: [
+        {
+          title: 'Management of Complex Intra-articular Fractures',
+          journal: 'Journal of Orthopedic Surgery',
+          year: '2023',
+          description: 'A comprehensive study on the outcomes of minimally invasive techniques in complex joint fractures.'
+        },
+        {
+          title: 'Early Mobilization Post-ACL Reconstruction',
+          journal: 'Sports Medicine Review',
+          year: '2022',
+          description: 'Evaluating the benefits of early physical therapy interventions following anterior cruciate ligament surgery.'
+        }
+      ],
+      awardList: [
+        {
+          title: 'Excellence in Trauma Care',
+          organization: 'Bangladesh Orthopedic Society',
+          year: '2024',
+          description: 'Awarded for outstanding contribution to emergency trauma management and patient recovery rates.'
+        },
+        {
+          title: 'Best Resident Award',
+          organization: 'Chattogram Medical College',
+          year: '2022',
+          description: 'Recognized for exceptional clinical skills and dedication to patient care during residency training.'
+        }
+      ]
+    }
   },
   services: {
     title: 'Specialized Services',
@@ -183,6 +216,33 @@ export const en = {
     emergency: 'Emergency Cases',
     emergencyDesc: 'For severe trauma or medical emergencies, please proceed to the nearest hospital emergency department immediately.',
     whatsappEmergency: 'WhatsApp (Emergency Only)',
+  },
+  seo: {
+    home: {
+      title: 'Dr. Md. Jahangir Alam | Orthopedic Surgeon',
+      description: 'Personal portfolio and appointment booking website for Dr. Md. Jahangir Alam, Orthopedic Surgeon based in Dhaka, Bangladesh.',
+      keywords: 'Doctor, Orthopedic Surgeon, Medical Officer, Dhaka, Bangladesh, Dr. Md. Jahangir Alam, Bone Fracture, Arthritis, Spine Specialist',
+    },
+    about: {
+      title: 'About Dr. Md. Jahangir Alam | Orthopedic Surgeon',
+      description: 'Learn about Dr. Md. Jahangir Alam, a dedicated Orthopedic Surgeon and Trauma Care Specialist in Dhaka, Bangladesh.',
+      keywords: 'About Dr. Md. Jahangir Alam, Orthopedic Surgeon Biography, Trauma Care Specialist, Dhaka Doctor',
+    },
+    services: {
+      title: 'Orthopedic Services | Dr. Md. Jahangir Alam',
+      description: 'Explore the specialized orthopedic services offered by Dr. Md. Jahangir Alam, including trauma care, joint replacement, and arthroscopy.',
+      keywords: 'Orthopedic Services, Trauma Care, Joint Replacement, Arthroscopy, Spine Surgery, Pediatric Orthopedics',
+    },
+    contact: {
+      title: 'Contact Dr. Md. Jahangir Alam | Orthopedic Surgeon',
+      description: 'Get in touch with Dr. Md. Jahangir Alam for consultations, appointments, and orthopedic care inquiries.',
+      keywords: 'Contact Orthopedic Surgeon, Doctor Appointment Dhaka, Dr. Md. Jahangir Alam Contact, Medical Consultation',
+    },
+    appointment: {
+      title: 'Book an Appointment | Dr. Md. Jahangir Alam',
+      description: 'Schedule your orthopedic consultation with Dr. Md. Jahangir Alam. Easy online appointment booking.',
+      keywords: 'Book Doctor Appointment, Orthopedic Consultation, Schedule Medical Visit, Dr. Md. Jahangir Alam Appointment',
+    }
   }
 };
 
@@ -197,9 +257,9 @@ export const bn = {
   hero: {
     acceptingPatients: 'নতুন রোগী দেখা হচ্ছে',
     name: 'ডাঃ মোঃ জাহাঙ্গীর আলম',
-    nameBangla: '(Dr. Md. Jahangir Alam)',
+    shortName: 'ডাঃ জাহাঙ্গীর',
     degrees: 'এমবিবিএস, বিসিএস (স্বাস্থ্য), এমএস (অর্থোপেডিক সার্জারী), সিসিডি (বারডেম)',
-    typewriter: 'হাড় ভাঙ্গা, বাত ব্যথা ও মেরুদণ্ড রোগ বিশেষজ্ঞ সার্জন',
+    typewriter: ['হাড় ভাঙ্গা', 'বাত ব্যথা', 'মেরুদণ্ড রোগ বিশেষজ্ঞ সার্জন'],
     subtitle: 'আপনার সুস্থতা ও স্বাভাবিক চলাফেরা নিশ্চিত করতে আমরা নিবেদিত।',
     bookConsultation: 'অ্যাপয়েন্টমেন্ট নিন',
     viewProfile: 'প্রোফাইল দেখুন',
@@ -279,6 +339,39 @@ export const bn = {
     p3: 'রোগীদের প্রতি তার দৃষ্টিভঙ্গি অত্যন্ত সহানুভূতিশীল এবং বিজ্ঞানভিত্তিক। তিনি রোগীদের তাদের শারীরিক অবস্থা সম্পর্কে বিস্তারিত বুঝিয়ে বলেন এবং চিকিৎসার প্রতিটি ধাপে তাদের মতামতকে গুরুত্ব দেন।',
     missionTitle: 'আমার লক্ষ্য',
     missionDesc: 'সঠিক রোগ নির্ণয়, আধুনিক অস্ত্রোপচার এবং সঠিক পুনর্বাসনের মাধ্যমে রোগীদের উন্নত ও সাশ্রয়ী অর্থোপেডিক চিকিৎসা প্রদান করা, যাতে তারা দ্রুত স্বাভাবিক জীবনে ফিরে যেতে পারেন।',
+    publicationsAndAwards: {
+      title: 'প্রকাশনা ও সম্মাননা',
+      publications: 'প্রকাশনা',
+      awards: 'পুরস্কার ও সম্মাননা',
+      publicationList: [
+        {
+          title: 'জটিল ইন্ট্রা-আর্টিকুলার ফ্র্যাকচারের ব্যবস্থাপনা',
+          journal: 'জার্নাল অফ অর্থোপেডিক সার্জারি',
+          year: '২০২৩',
+          description: 'জটিল জয়েন্ট ফ্র্যাকচারে মিনিমালি ইনভেসিভ টেকনিকের ফলাফলের উপর একটি ব্যাপক গবেষণা।'
+        },
+        {
+          title: 'এসিএল (ACL) পুনর্গঠনের পর প্রাথমিক সচলতা',
+          journal: 'স্পোর্টস মেডিসিন রিভিউ',
+          year: '২০২২',
+          description: 'অ্যান্টেরিয়র ক্রুসিয়েট লিগামেন্ট সার্জারির পর প্রাথমিক ফিজিক্যাল থেরাপির সুবিধা মূল্যায়ন।'
+        }
+      ],
+      awardList: [
+        {
+          title: 'ট্রমা কেয়ারে শ্রেষ্ঠত্ব',
+          organization: 'বাংলাদেশ অর্থোপেডিক সোসাইটি',
+          year: '২০২৪',
+          description: 'জরুরী ট্রমা ব্যবস্থাপনা এবং রোগীর দ্রুত সুস্থতায় অসামান্য অবদানের জন্য পুরস্কৃত।'
+        },
+        {
+          title: 'সেরা রেসিডেন্ট অ্যাওয়ার্ড',
+          organization: 'চট্টগ্রাম মেডিকেল কলেজ',
+          year: '২০২২',
+          description: 'রেসিডেন্সি প্রশিক্ষণের সময় ব্যতিক্রমী ক্লিনিকাল দক্ষতা এবং রোগীর যত্নের প্রতি উৎসর্গের জন্য স্বীকৃত।'
+        }
+      ]
+    }
   },
   services: {
     title: 'বিশেষায়িত সেবাসমূহ',
@@ -371,5 +464,32 @@ export const bn = {
     emergency: 'জরুরি অবস্থা',
     emergencyDesc: 'যেকোনো গুরুতর দুর্ঘটনা বা ইমার্জেন্সির ক্ষেত্রে দ্রুত নিকটস্থ হাসপাতালের জরুরি বিভাগে যোগাযোগ করুন।',
     whatsappEmergency: 'হোয়াটসঅ্যাপ (শুধুমাত্র জরুরি)',
+  },
+  seo: {
+    home: {
+      title: 'ডাঃ মোঃ জাহাঙ্গীর আলম | অর্থোপেডিক সার্জন',
+      description: 'ডাঃ মোঃ জাহাঙ্গীর আলম, ঢাকার একজন অর্থোপেডিক সার্জনের ব্যক্তিগত পোর্টফোলিও এবং অ্যাপয়েন্টমেন্ট বুকিং ওয়েবসাইট।',
+      keywords: 'ডাক্তার, অর্থোপেডিক সার্জন, মেডিকেল অফিসার, ঢাকা, বাংলাদেশ, ডাঃ মোঃ জাহাঙ্গীর আলম, হাড় ভাঙ্গা, বাত ব্যথা, মেরুদণ্ড বিশেষজ্ঞ',
+    },
+    about: {
+      title: 'ডাঃ মোঃ জাহাঙ্গীর আলম সম্পর্কে | অর্থোপেডিক সার্জন',
+      description: 'ঢাকার একজন নিবেদিত অর্থোপেডিক সার্জন এবং ট্রমা কেয়ার বিশেষজ্ঞ ডাঃ মোঃ জাহাঙ্গীর আলম সম্পর্কে জানুন।',
+      keywords: 'ডাঃ মোঃ জাহাঙ্গীর আলম সম্পর্কে, অর্থোপেডিক সার্জনের জীবনী, ট্রমা কেয়ার বিশেষজ্ঞ, ঢাকার ডাক্তার',
+    },
+    services: {
+      title: 'অর্থোপেডিক সেবাসমূহ | ডাঃ মোঃ জাহাঙ্গীর আলম',
+      description: 'ডাঃ মোঃ জাহাঙ্গীর আলমের বিশেষায়িত অর্থোপেডিক সেবাসমূহ সম্পর্কে জানুন, যার মধ্যে ট্রমা কেয়ার, জয়েন্ট রিপ্লেসমেন্ট এবং আর্থ্রোস্কোপি অন্তর্ভুক্ত।',
+      keywords: 'অর্থোপেডিক সেবাসমূহ, ট্রমা কেয়ার, জয়েন্ট রিপ্লেসমেন্ট, আর্থ্রোস্কোপি, মেরুদণ্ডের সার্জারি, পেডিয়াট্রিক অর্থোপেডিক্স',
+    },
+    contact: {
+      title: 'যোগাযোগ করুন ডাঃ মোঃ জাহাঙ্গীর আলম | অর্থোপেডিক সার্জন',
+      description: 'পরামর্শ, অ্যাপয়েন্টমেন্ট এবং অর্থোপেডিক চিকিৎসার জন্য ডাঃ মোঃ জাহাঙ্গীর আলমের সাথে যোগাযোগ করুন।',
+      keywords: 'অর্থোপেডিক সার্জনের সাথে যোগাযোগ, ডাক্তার অ্যাপয়েন্টমেন্ট ঢাকা, ডাঃ মোঃ জাহাঙ্গীর আলম যোগাযোগ, চিকিৎসা পরামর্শ',
+    },
+    appointment: {
+      title: 'অ্যাপয়েন্টমেন্ট নিন | ডাঃ মোঃ জাহাঙ্গীর আলম',
+      description: 'ডাঃ মোঃ জাহাঙ্গীর আলমের সাথে আপনার অর্থোপেডিক পরামর্শের সময়সূচী নির্ধারণ করুন। সহজে অনলাইনে অ্যাপয়েন্টমেন্ট বুকিং।',
+      keywords: 'ডাক্তারের অ্যাপয়েন্টমেন্ট বুক করুন, অর্থোপেডিক পরামর্শ, চিকিৎসা পরিদর্শনের সময়সূচী, ডাঃ মোঃ জাহাঙ্গীর আলম অ্যাপয়েন্টমেন্ট',
+    }
   }
 };

@@ -6,27 +6,13 @@ import { ArrowUpRight, Activity, Bone, HeartPulse, MapPin, Phone, Mail, Calendar
 import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
+import DynamicSEO from '@/components/DynamicSEO';
 
 export default function Home() {
-  const [text, setText] = useState('');
   const [degreeText, setDegreeText] = useState('');
   const { t, lang } = useLanguage();
-  const fullText = t.hero.typewriter;
+  const specialties = t.hero.typewriter as string[];
   const fullDegreeText = t.hero.degrees;
-  
-  useEffect(() => {
-    let i = 0;
-    setText('');
-    const timer = setInterval(() => {
-      if (i < fullText.length) {
-        setText(fullText.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 50);
-    return () => clearInterval(timer);
-  }, [fullText]);
 
   useEffect(() => {
     let i = 0;
@@ -44,44 +30,77 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] selection:bg-primary/20">
+      <DynamicSEO page="home" />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="flex flex-col items-center text-center gap-12">
             
-            <div className="lg:col-span-7 space-y-10 z-10">
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="text-5xl md:text-7xl font-bold text-[#212529] tracking-tighter leading-[1.1] font-serif"
-              >
-                {t.hero.name}
-                <span className="block text-3xl md:text-5xl text-[#495057] font-medium mt-4 tracking-tight font-serif">
-                  {t.hero.nameBangla}
-                </span>
-                <span className="block text-xl md:text-2xl text-[var(--color-primary)] font-medium mt-4 tracking-tight font-sans min-h-[2rem] md:min-h-[2.5rem]">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="relative flex flex-col items-center w-full"
+            >
+              <div className="relative aspect-square w-full max-w-sm mx-auto rounded-full overflow-hidden shadow-2xl animate-pulse-border">
+                <Image
+                  src="https://i.ibb.co.com/DfKVvCc7/dr-jahangir-alam.jpg"
+                  alt="Dr. Md. Jahangir Alam"
+                  fill
+                  className="object-cover"
+                  priority
+                  unoptimized
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 border border-black/10 rounded-full pointer-events-none"></div>
+              </div>
+              
+              <div className="mt-8 text-center flex flex-col items-center">
+                <motion.h1 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  className="text-5xl md:text-7xl font-bold text-[#212529] tracking-tighter leading-[1.1] font-serif mb-4"
+                >
+                  {t.hero.name}
+                </motion.h1>
+
+                <span className="block text-xl md:text-2xl text-[var(--color-primary)] font-medium tracking-tight font-sans min-h-[2rem] md:min-h-[2.5rem]">
                   {degreeText}<span className="typewriter-cursor">|</span>
                 </span>
-              </motion.h1>
-              
+                
+                <div className="flex flex-wrap justify-center gap-2 mt-4 max-w-md">
+                  {specialties.map((specialty, index) => (
+                    <motion.span
+                      key={`${lang}-${index}`}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.5 + index * 0.3 }}
+                      className="inline-block bg-[var(--color-primary)]/10 text-[var(--color-primary)] px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      {specialty}
+                    </motion.span>
+                  ))}
+                </div>
+                <p className="text-sm text-[#6b6b6b] mt-4 font-medium">{t.hero.badgeStatus}</p>
+              </div>
+            </motion.div>
+
+            <div className="space-y-8 z-10 max-w-3xl mx-auto">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="text-xl text-[#6b6b6b] max-w-xl leading-relaxed font-light min-h-[4rem]"
+                className="text-xl text-[#6b6b6b] leading-relaxed font-light"
               >
-                <span className="text-[var(--color-primary)] font-medium">{text}</span>
-                <span className="typewriter-cursor text-[var(--color-primary)]">|</span>
-                <br />
-                <span className="text-base mt-2 block">{t.hero.subtitle}</span>
+                <span className="text-lg block">{t.hero.subtitle}</span>
               </motion.div>
               
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="flex flex-col sm:flex-row gap-4 pt-4"
+                className="flex flex-col sm:flex-row justify-center gap-4 pt-4"
               >
                 <Link
                   href="/appointment"
@@ -98,43 +117,6 @@ export default function Home() {
                 </Link>
               </motion.div>
             </div>
-
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="lg:col-span-5 relative"
-            >
-              <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:ml-auto rounded-[2rem] overflow-hidden shadow-2xl animate-pulse-border">
-                <Image
-                  src="https://i.ibb.co.com/DfKVvCc7/dr-jahangir-alam.jpg"
-                  alt="Dr. Md. Jahangir Alam"
-                  fill
-                  className="object-cover"
-                  priority
-                  unoptimized
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 border border-black/10 rounded-[2rem] pointer-events-none"></div>
-              </div>
-              
-              {/* Floating Badge */}
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-6 rounded-3xl shadow-xl border border-[#dee2e6] max-w-[240px]"
-              >
-                <div className="flex items-center gap-4 mb-2">
-                  <div className="h-10 w-10 rounded-full bg-[var(--color-primary)]/10 flex items-center justify-center text-[var(--color-primary)]">
-                    <Bone className="h-5 w-5" />
-                  </div>
-                  <div className="text-2xl font-bold text-[#212529] font-serif">{t.hero.badgeDegree}</div>
-                </div>
-                <p className="text-sm text-[#495057] font-medium">{t.hero.badgeSpecialty}</p>
-                <p className="text-xs text-[#6b6b6b] mt-1">{t.hero.badgeStatus}</p>
-              </motion.div>
-            </motion.div>
 
           </div>
         </div>

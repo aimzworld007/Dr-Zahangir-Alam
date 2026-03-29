@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Activity, Bone, HeartPulse, ShieldPlus, X } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
+import DynamicSEO from '@/components/DynamicSEO';
 
 export default function Services() {
   const { t } = useLanguage();
@@ -49,6 +50,7 @@ export default function Services() {
 
   return (
     <div className="bg-[#f8f9fa] min-h-screen py-24">
+      <DynamicSEO page="services" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-5xl font-bold text-[#212529] mb-6 font-serif tracking-tight">{t.services.title}</h1>

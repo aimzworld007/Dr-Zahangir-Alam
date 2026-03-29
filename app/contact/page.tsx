@@ -2,12 +2,14 @@
 
 import { Mail, MapPin, Phone, Facebook, Linkedin, Twitter, Instagram, Clock } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
+import DynamicSEO from '@/components/DynamicSEO';
 
 export default function Contact() {
   const { t } = useLanguage();
 
   return (
     <div className="bg-[#f8f9fa] min-h-screen py-24">
+      <DynamicSEO page="contact" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-5xl font-bold text-[#212529] mb-6 font-serif tracking-tight">{t.contact.title}</h1>
@@ -41,8 +43,8 @@ export default function Contact() {
             </div>
             <div className="mt-6 pt-6 border-t border-[#dee2e6]">
               <p className="text-sm text-[#6b6b6b] mb-2 font-medium">{t.contact.whatsappEmergency}</p>
-              <a href="https://wa.me/8801775193265" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-green-600 hover:text-green-700 transition-colors">
-                +880 1775-193265
+              <a href="https://wa.me/8801609472942" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-green-600 hover:text-green-700 transition-colors">
+                +880 1609-472942
               </a>
             </div>
           </div>
@@ -82,7 +84,7 @@ export default function Contact() {
         <div className="mt-16 bg-white rounded-[2rem] p-12 shadow-lg shadow-black/5 border border-[#dee2e6] text-center">
           <h3 className="text-3xl font-bold text-[#212529] mb-8 font-serif">Connect With Us</h3>
           <div className="flex justify-center gap-6">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="h-14 w-14 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#6b6b6b] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/1DFeAA75qB/" target="_blank" rel="noopener noreferrer" className="h-14 w-14 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#6b6b6b] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1" aria-label="Facebook">
               <Facebook className="h-6 w-6" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-14 w-14 rounded-full bg-[#f8f9fa] flex items-center justify-center text-[#6b6b6b] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1" aria-label="LinkedIn">
