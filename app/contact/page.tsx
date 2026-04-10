@@ -25,9 +25,16 @@ export default function Contact() {
               <MapPin className="h-8 w-8" />
             </div>
             <h3 className="text-2xl font-semibold text-[#212529] mb-4 font-serif">{t.contact.address}</h3>
-            <p className="text-[#6b6b6b] font-light leading-relaxed">
+            <p className="text-[#6b6b6b] font-light leading-relaxed mb-6 pb-6 border-b border-[#dee2e6]">
               {t.contact.addressDesc}
             </p>
+            <h3 className="text-xl font-semibold text-[#212529] mb-2 font-serif">{t.contact.newChamberTitle}</h3>
+            <p className="text-[#6b6b6b] font-light leading-relaxed mb-2">
+              {t.contact.newChamberDesc}
+            </p>
+            <a href="tel:01585875229" className="text-sm font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors block">
+              {t.contact.newChamberPhone}
+            </a>
           </div>
 
           {/* Phone */}

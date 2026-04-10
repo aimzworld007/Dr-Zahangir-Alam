@@ -61,7 +61,11 @@ export default function Footer() {
                 <div className="mt-1 bg-[#343a40] p-2 rounded-lg group-hover:bg-[var(--color-primary)] transition-colors duration-300">
                   <MapPin className="w-4 h-4 text-[#adb5bd] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <span className="ml-4 text-[#adb5bd] font-light leading-relaxed">{t.contact.addressDesc}</span>
+                <div className="ml-4 flex flex-col gap-1">
+                  <span className="text-[#adb5bd] font-light leading-relaxed">{t.contact.addressDesc}</span>
+                  <span className="text-[#adb5bd] font-light leading-relaxed mt-2 pt-2 border-t border-[#495057]">{t.contact.newChamberDesc}</span>
+                  <a href="tel:01585875229" className="text-[#adb5bd] hover:text-[var(--color-primary)] transition-colors font-light text-sm">{t.contact.newChamberPhone}</a>
+                </div>
               </li>
               <li className="flex items-center group">
                 <div className="bg-[#343a40] p-2 rounded-lg group-hover:bg-[var(--color-primary)] transition-colors duration-300">

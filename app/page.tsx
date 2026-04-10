@@ -44,7 +44,7 @@ export default function Home() {
             >
               <div className="relative aspect-square w-full max-w-sm mx-auto rounded-full overflow-hidden shadow-2xl animate-pulse-border">
                 <Image
-                  src="https://i.ibb.co.com/DfKVvCc7/dr-jahangir-alam.jpg"
+                  src="https://i.ibb.co/DfKVvCc7/dr-jahangir-alam.jpg"
                   alt="Dr. Md. Jahangir Alam"
                   fill
                   className="object-cover"
